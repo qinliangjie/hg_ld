@@ -1,0 +1,691 @@
+html {
+    @firstViewportWidth: 1920px; //默认UI设计尺寸
+    @defaultFontSize: 100px; //默认初始fontsize大小
+
+    @media screen and (width: @firstViewportWidth) {
+        //绑定到没听查询
+        font-size: @defaultFontSize;
+        min-width: 100%;
+    }
+
+    ;
+
+    //根据传入的屏幕尺寸@viewportWidth计算出与初始@firstViewportWidth的比例，然后将默认的fontsize> @defaultFontSize对应的放大缩小
+    .media(@viewportWidth, @firstViewportWidth: 1920px) {
+        @media screen and (min-width: @viewportWidth) {
+            font-size: @defaultFontSize / (@firstViewportWidth / @viewportWidth) !important;
+        }
+    }
+
+    ;
+    .media(1024px); //所要设配的屏幕尺寸
+    .media(1366px);
+    .media(1280px);
+    .media(1440px);
+    .media(1600px);
+    .media(1920px);
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 75px !important;
+    }
+}
+
+.top_show {
+    width: 100%;
+    position: relative;
+
+    .play {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -4rem;
+        top: 50%;
+        margin-top: 2.5rem;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 0.02rem;
+    left: 0.13rem;
+    width: 2.33rem;
+    height: 1.74rem;
+    z-index: 99;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+}
+
+.appbtn {
+    display: block;
+    position: absolute;
+    width: 3.8rem;
+    height: 1.4rem;
+    left: 50%;
+    margin-left: -5.5rem;
+    top: 6.83rem;
+    cursor: pointer;
+}
+
+.appbtn:hover {}
+
+.number {
+    position: absolute;
+    width: 7.82rem;
+    height: 1.19rem;
+    background: url(../images/body/number.png) no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    margin-left: -3.91rem;
+    top: 1.55rem;
+    line-height: 1rem;
+    padding-left: 2.7rem;
+    letter-spacing: .14rem;
+}
+
+.number span {
+    background-image: -webkit-linear-gradient(bottom, #5f0000, #b5110e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: .65rem;
+    line-height: .6rem
+}
+
+.advance_show {
+    position: relative;
+    width: 100%;
+
+    .time {
+        font-size: 0.21rem;
+        text-align: center;
+        background: -webkit-linear-gradient(top, #fe0000, #c50000);
+        /* 背景色渐变 */
+        -webkit-background-clip: text;
+        /* 规定背景的划分区域 */
+        -webkit-text-fill-color: transparent;
+        margin-top: 1.8rem;
+    }
+
+    .title {
+        width: 8.97rem;
+        height: 1.45rem;
+        position: absolute;
+        top: .75rem;
+        left: 50%;
+        margin-left: -4.45rem
+    }
+
+    .advance {
+        position: absolute;
+        width: 13.03rem;
+        height: 5.74rem;
+        top: 2.47rem;
+        left: 50%;
+        margin-left: -6.5rem;
+        background: url('../images/body/mainbody.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: 10;
+    }
+
+    .equipment_ {
+        position: absolute;
+        top: 3.7rem;
+        left: 50%;
+        margin-left: -4.56rem;
+        z-index: 3;
+        height: .6rem;
+
+        img {
+            width: 1.16rem;
+            height: .55rem;
+            cursor: pointer;
+            vertical-align: top
+        }
+    }
+
+    .adv_dom {
+        width: 12rem;
+        height: 1rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -4.5rem;
+        bottom: -2rem;
+
+        .phoneBtn {
+            position: absolute;
+            width: 2.64rem;
+            height: 0.5rem;
+            left: 0;
+            top: 0;
+            cursor:pointer;
+            img {
+                width: 1.32rem;
+                display: block;
+                float: left;
+            }
+        }
+
+        .adv_input {
+            width: 5.64rem;
+            height: .5rem;
+            font-size: .22rem;
+            padding-left: .1rem;
+            border: 0;
+            position: absolute;
+            top: 0;
+            left: 2.64rem;
+            background: url(../images/body/inputimg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        ::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            text-align: center;
+            color: black;
+            font-size: .15rem
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            text-align: center;
+            color: black;
+            font-size: .15rem
+        }
+
+        :-ms-input-placeholder {
+            /* IE 10+ */
+            text-align: center;
+            color: black;
+            font-size: .15rem
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            text-align: center;
+            color: black;
+            font-size: .15rem
+        }
+
+        .adv_btn {
+            position: absolute;
+            width: 2.37rem;
+            height: .91rem;
+            left: 8.22rem;
+            top: -.2rem;
+        }
+
+        .adv_btn:hover {
+            opacity: .9;
+        }
+
+        .active_radio {
+            display: inline-block;
+        }
+
+        .adv_radio {
+            width: .2rem;
+            vertical-align: top
+        }
+
+        .adv_check {
+                position: absolute;
+                bottom: .1rem;
+                width: 0.25rem;
+                cursor: pointer;
+                display: none;
+                left: 50%;
+                margin-left: -3.7rem;
+        }
+        .adv_explain{
+            position: absolute;
+            bottom: 0.13rem;
+            left: 50%;
+            margin-left: -3.35rem;
+        }
+        .active {
+            display: block;
+        }
+
+        .conditions {
+            width: 1rem;
+            height: 0.4rem;
+            bottom: -.5rem;
+            position: absolute;
+            right: 2.75rem;
+            cursor: pointer;
+        }
+
+        .matters {
+            width: 1.5rem;
+            height: 0.4rem;
+            bottom: -.5rem;
+            position: absolute;
+            right: 1.1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.task_show {
+    position: relative;
+    z-index: 9;
+
+    .task_bg {}
+    .task_gift{
+        position: absolute;
+        width: 2.28rem;
+        height: 1.87rem;
+        top: 1.5rem;
+        left: 50%;
+        margin-left: 1.5rem;
+    }
+    .task_text{
+        position: absolute;
+        width: 4.81rem;
+        height: .56rem;
+        top: 2rem;
+        left: 50%;
+        margin-left: -3.8rem;
+    }
+    .line_dom{
+        position: absolute;
+        width: 0.6rem;
+        overflow: hidden;
+        height: 0.4rem;
+        top: 2.83rem;
+        left: 50%;
+        margin-left: -3.84rem;
+        line-height: .1rem;
+        img{
+            max-width: inherit;
+        }
+        .task_line{
+            width: 4.3rem;
+        }
+    }
+    .small_gift_dom{
+        position: absolute;
+        width: 4.6rem;
+        height: 0.4rem;
+        top: 2.83rem;
+        left: 50%;
+        margin-left: -3.84rem;
+        line-height: .1rem;
+        .small_gift_{
+            position:absolute;
+            width:0.46rem;
+            height:0.43rem;
+            left:.4rem;
+            top:-.1rem;
+        }
+     }
+    .dom1 {
+        position: absolute;
+        width: 9.44rem;
+        height: 6.43rem;
+        top: 6rem;
+        left: 50%;
+        margin-left: -4.5rem;
+        transition: all .5s ease;
+
+        .gotoTask {
+            position: absolute;
+            width: 2.8rem;
+            height: 0.9rem;
+            bottom: 0.05rem;
+            left: 50%;
+            margin-left: -1.7rem;
+            cursor: pointer;
+        }
+    }
+
+    .dom2 {
+        position: absolute;
+        width: 12rem;
+        height: 6.43rem;
+        top: 6rem;
+        left: 150%;
+        margin-left: -6rem;
+        transition: all .5s ease;
+
+        .complete {
+            width: 3.34rem;
+            height: 2.69rem;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            margin-left: -1.7rem;
+            display: none
+        }
+
+        .task_play {
+            width: 2.69rem;
+            height: .91rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.23rem;
+        }
+
+        .task_play:hover {
+            opacity: .9;
+        }
+
+        .task1 {
+            display: inline-block;
+            position: relative;
+            width: 3.6rem;
+            height: 5.94rem;
+            background: url('../images/task/task1.png') no-repeat;
+            background-size: 100% 100%;
+            vertical-align: bottom;
+
+            .task_play {
+                background: url('../images/task/taskbtn1.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        .task2 {
+            display: inline-block;
+            position: relative;
+            width: 3.67rem;
+            height: 5.39rem;
+            background: url('../images/task/task2.png') no-repeat;
+            background-size: 100% 100%;
+            vertical-align: bottom;
+
+            .task_play {
+                background: url('../images/task/taskbtn2.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        .task3 {
+            display: inline-block;
+            position: relative;
+            width: 3.98rem;
+            height: 5.62rem;
+            background: url('../images/task/task3.png') no-repeat;
+            background-size: 100% 100%;
+            vertical-align: bottom;
+
+            .complete {
+                margin-left: -1.2rem
+            }
+
+            .task_play {
+                background: url('../images/task/taskbtn3.png') no-repeat;
+                background-size: 100% 100%;
+                margin-left: -.8rem
+            }
+        }
+
+        .left {
+            display: block;
+            width: .72rem;
+            height: 1.18rem;
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            margin-top: -.6rem;
+        }
+    }
+}
+
+.game_show {
+    position: relative;
+    margin-top: -2rem;
+
+    .title {
+        width: 9.67rem;
+        height: 1.45rem;
+        position: absolute;
+        top: 1.2rem;
+        left: 50%;
+        margin-left: -4.7rem
+    }
+}
+
+.mover {
+    position: absolute;
+    width: 100%;
+    height: 5.55rem;
+    top: 3.5rem;
+
+    .swiper-container {
+        width: 10rem;
+    }
+
+    .swiper-slide {
+        width: 7.93rem;
+        height: 4.46rem;
+    }
+
+    .swiper-pagination4.swiper-pagination-clickable.swiper-pagination-bullets {
+        text-align: center;
+        margin-top: .3rem
+    }
+
+    .swiper-pagination-bullet {
+        width: .15rem;
+        height: .15rem;
+        border: 1px solid #eb0012;
+        opacity: 1;
+        background: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: .5rem;
+        background-color: #eb0012;
+        border-radius: .06rem;
+    }
+}
+
+.scroolLeft {
+    cursor: pointer;
+    -webkit-animation: mymoveL ease-in-out 1.5s infinite;
+    animation: mymoveL ease-in-out 1.5s infinite;
+}
+
+@keyframes mymoveL {
+    0% {
+        left: -2rem
+    }
+
+    50% {
+        left: -2.2rem
+    }
+
+    100% {
+        left: -2rem
+    }
+}
+
+@-webkit-keyframes mymoveL {
+    0% {
+        left: -2rem
+    }
+
+    50% {
+        left: -2.2rem
+    }
+
+    100% {
+        left: -2rem
+    }
+}
+
+#booking {
+    width: 8.76rem;
+    height: 3.39rem;
+    background: url("../images/alert/alert1.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+
+    .closeL {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 0;
+        top: 0rem;
+        cursor: pointer;
+    }
+}
+
+#alertError {
+    width: 8.76rem;
+    height: 3.39rem;
+    background: url("../images/alert/alertError.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+
+    .closeL {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 0;
+        top: 0rem;
+        cursor: pointer;
+    }
+}
+
+.layui-layer-page {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0) !important;
+}
+
+#attention {
+    width: 8.76rem;
+    height: 6.05rem;
+    background: url("../images/alert/alert2.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+
+    .closeL {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 0;
+        top: 0rem;
+        cursor: pointer;
+    }
+}
+
+#confirm {
+    width: 8.76rem;
+    height: 7.73rem;
+    background: url("../images/alert/alert3.png") no-repeat;
+    background-size: 100% 100%;
+    display: none;
+
+    .closeL {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 0;
+        top: 0rem;
+        cursor: pointer;
+    }
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 115;
+    text-align: center;
+}
+
+.overlay>section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    height: 5.6rem;
+    margin-left: -5rem;
+    margin-top: -2.8rem;
+    border-radius: 0;
+    z-index: 116;
+    color: #333;
+    box-shadow: 0 0 0.8em #fff;
+}
+
+.close {
+    position: absolute;
+    z-index: 9999999;
+    right: -62px;
+    top: -37px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 0.56rem;
+    font-size: 0.26rem;
+    text-align: center;
+    cursor: pointer;
+    opacity: .8;
+    color: #fff;
+    z-index: 116;
+}
+
+.close>img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1787px) and (max-width: 1900px) {
+    .task_show {
+        position: relative;
+        z-index: 9;
+        margin-top: -4.6rem;
+    }
+
+    .task_show .title {
+        width: 9.67rem;
+        height: 1.45rem;
+        position: absolute;
+        top: 4.8rem;
+        left: 50%;
+        margin-left: -4.7rem;
+    }
+
+    .task_show .dom1 {
+        position: absolute;
+        width: 9.44rem;
+        height: 6.43rem;
+        top: 8rem;
+        margin-left: -4.5rem;
+        transition: all 0.5s ease;
+    }
+
+    .task_show .dom2 {
+        position: absolute;
+        width: 12rem;
+        height: 6.43rem;
+        top: 8rem;
+        margin-left: -6rem;
+        transition: all 0.5s ease;
+    }
+}
+
+.gotoforum {
+    display: block;
+    position: absolute;
+    width: 2.8rem;
+    height: .5rem;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.6rem;
+    cursor: pointer;
+}
