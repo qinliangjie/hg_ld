@@ -295,6 +295,15 @@ html {
         left: 50%;
         margin-left: -3.8rem;
     }
+    .task_bottom_line{
+        position: absolute;
+        width: 5.28rem;
+        overflow: hidden;
+        height: 0.4rem;
+        top: 2.83rem;
+        left: 50%;
+        margin-left: -3.84rem;
+    }
     .line_dom{
         position: absolute;
         width: 0.6rem;
@@ -328,22 +337,27 @@ html {
         }
      }
     .dom1 {
+        transition: all 0.5s ease;
         position: absolute;
-        width: 9.44rem;
-        height: 6.43rem;
-        top: 6rem;
-        left: 50%;
-        margin-left: -4.5rem;
-        transition: all .5s ease;
-
+        top: 0;
+        left: 0;
+        width: 100%;
         .gotoTask {
             position: absolute;
-            width: 2.8rem;
+            width: 2rem;
             height: 0.9rem;
-            bottom: 0.05rem;
+            top: 8rem;
             left: 50%;
-            margin-left: -1.7rem;
+            margin-left: -.9rem;
             cursor: pointer;
+        }
+        .task_design{
+            position:absolute;
+            width:7.67rem;
+            height:4.86rem;
+            top:4.7rem;
+            left:50%;
+            margin-left:-3.86rem;
         }
     }
 
@@ -351,28 +365,27 @@ html {
         position: absolute;
         width: 12rem;
         height: 6.43rem;
-        top: 6rem;
+        top: 3rem;
         left: 150%;
         margin-left: -6rem;
         transition: all .5s ease;
-
+        
         .complete {
             width: 3.34rem;
             height: 2.69rem;
             position: absolute;
-            bottom: 1.5rem;
+            bottom: .8rem;
             left: 50%;
-            margin-left: -1.7rem;
-            display: none
+            margin-left: -2rem;
         }
 
         .task_play {
-            width: 2.69rem;
-            height: .91rem;
+            width: 2.46rem;
+            height: .73rem;
             position: absolute;
             bottom: 0;
             left: 50%;
-            margin-left: -1.23rem;
+            margin-left: -1.7rem;
         }
 
         .task_play:hover {
@@ -380,14 +393,14 @@ html {
         }
 
         .task1 {
-            display: inline-block;
-            position: relative;
-            width: 3.6rem;
-            height: 5.94rem;
+            position: absolute;
+            width: 4.6rem;
+            height: 4.58rem;
             background: url('../images/task/task1.png') no-repeat;
             background-size: 100% 100%;
             vertical-align: bottom;
-
+            top: 0;
+            left: 0;
             .task_play {
                 background: url('../images/task/taskbtn1.png') no-repeat;
                 background-size: 100% 100%;
@@ -395,63 +408,152 @@ html {
         }
 
         .task2 {
-            display: inline-block;
-            position: relative;
-            width: 3.67rem;
-            height: 5.39rem;
+            position: absolute;
+            width: 4.17rem;
+            height: 4.05rem;
             background: url('../images/task/task2.png') no-repeat;
             background-size: 100% 100%;
             vertical-align: bottom;
-
+            top: -1rem;
+            left: 50%;
+            margin-left: -1.9rem;
             .task_play {
                 background: url('../images/task/taskbtn2.png') no-repeat;
                 background-size: 100% 100%;
+                margin-left: -1.3rem;
             }
         }
 
         .task3 {
-            display: inline-block;
-            position: relative;
-            width: 3.98rem;
-            height: 5.62rem;
+            position: absolute;
+            width: 4.21rem;
+            height: 4.06rem;
             background: url('../images/task/task3.png') no-repeat;
             background-size: 100% 100%;
             vertical-align: bottom;
-
+            top: .6rem;
+            left: 50%;
+            margin-left: 2.4rem;
             .complete {
-                margin-left: -1.2rem
+               
             }
-
             .task_play {
                 background: url('../images/task/taskbtn3.png') no-repeat;
                 background-size: 100% 100%;
-                margin-left: -.8rem
+                margin-left: -.8rem;
+                margin-left: -1.5rem;
             }
         }
 
         .left {
             display: block;
-            width: .72rem;
-            height: 1.18rem;
+            width: .64rem;
+            height: .64rem;
             position: absolute;
             left: -2rem;
             top: 50%;
-            margin-top: -.6rem;
+            margin-top: -2rem;
         }
     }
 }
 
 .game_show {
     position: relative;
-    margin-top: -2rem;
+    .game_bg{
 
-    .title {
-        width: 9.67rem;
-        height: 1.45rem;
-        position: absolute;
-        top: 1.2rem;
-        left: 50%;
-        margin-left: -4.7rem
+    }
+    .game_people{
+            width: 12rem;
+            position: absolute;
+            top:0;
+            left:50%;
+            margin-left:-6rem;
+            .noth_select{
+                width: 3.37rem;
+                height: 6.8rem;
+                position: absolute;
+                left: 0;
+                top: 1.7rem;
+                transition: all .3s ease;
+                .thor{
+                    position: absolute;
+                    top: .25rem;
+                    width: 1.49rem;
+                    height: .64rem;
+                    background: url(../images/game/1out.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .thor_active{
+                    top: -0.35rem;
+                    width: 1.66rem;
+                    height: 1.26rem;
+                    background: url(../images/game/1in.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .odin{
+                    position: absolute;
+                    top: 1.5rem;
+                    width: 1.49rem;
+                    height: .64rem;
+                    background: url(../images/game/2out.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .odin_active{
+                    position: absolute;
+                    top: .7rem;
+                    left: -1.5rem;
+                    width: 3.15rem;
+                    height: 1.46rem;
+                    background: url(../images/game/2in.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .loki{
+                    position: absolute;
+                    top: 2.7rem;
+                    width: 1.49rem;
+                    height: .64rem;
+                    background: url(../images/game/3out.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .loki_active{
+                    position: absolute;
+                    top: 2.15rem;
+                    left: -.85rem;
+
+                    width: 2.51rem;
+                    height: 1.20rem;
+                    background: url(../images/game/3in.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .hela{
+                    position: absolute;
+                    top: 3.9rem;
+                    width: 1.49rem;
+                    height: .64rem;
+                    background: url(../images/game/4out.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .hela_active{
+                    position: absolute;
+                    top: 3.57rem;
+                    left: -.1rem;
+                    width: 1.81rem;
+                    height: .97rem;
+                    background: url(../images/game/4in.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+            .hreo_img{
+                position: absolute;
+                width: 9.33rem;
+                top: 1.3rem;
+                left: 50%;
+                margin-left: -3.5rem;
+                display: none
+            }
+            .active{
+                display: block;
+            }
     }
 }
 
@@ -498,29 +600,29 @@ html {
 
 @keyframes mymoveL {
     0% {
-        left: -2rem
+        left: -1rem
     }
 
     50% {
-        left: -2.2rem
+        left: -1.5rem
     }
 
     100% {
-        left: -2rem
+        left: -1rem
     }
 }
 
 @-webkit-keyframes mymoveL {
     0% {
-        left: -2rem
+        left: -1rem
     }
 
     50% {
-        left: -2.2rem
+        left: -1.5rem
     }
 
     100% {
-        left: -2rem
+        left: -1rem
     }
 }
 
@@ -530,7 +632,6 @@ html {
     background: url("../images/alert/alert1.png") no-repeat;
     background-size: 100% 100%;
     display: none;
-
     .closeL {
         position: absolute;
         width: 1rem;
@@ -547,7 +648,6 @@ html {
     background: url("../images/alert/alertError.png") no-repeat;
     background-size: 100% 100%;
     display: none;
-
     .closeL {
         position: absolute;
         width: 1rem;
@@ -569,7 +669,6 @@ html {
     background: url("../images/alert/alert2.png") no-repeat;
     background-size: 100% 100%;
     display: none;
-
     .closeL {
         position: absolute;
         width: 1rem;
@@ -586,7 +685,6 @@ html {
     background: url("../images/alert/alert3.png") no-repeat;
     background-size: 100% 100%;
     display: none;
-
     .closeL {
         position: absolute;
         width: 1rem;
@@ -688,4 +786,8 @@ html {
     left: 50%;
     margin-left: -1.6rem;
     cursor: pointer;
+}
+.foot_show{
+   position:relative;
+   width:100%;
 }

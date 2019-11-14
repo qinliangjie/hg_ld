@@ -1,41 +1,26 @@
+import './css/animate.min.css'
 import './css/index.css'
 import './css/indexless.less'
+
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.css'
 import layer from 'layui-layer'
 // import myvideos from './images/video/1.mp4'
-new Swiper('.swiper-container4', {
-    effect: 'coverflow',
-    grabCursor: true,
-    initialSlide: 1,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-        rotate: 20,
-        stretch: 20,
-        depth: 200,
-        modifier: 1,
-        slideShadows: true,
-    },
-    pagination: {
-        el: '.swiper-pagination4',
-        clickable: true,
-    }
-});
+
 let g = document.getElementsByClassName("gotoTask")[0];
 let k = document.getElementsByClassName("dom1")[0];
 let d = document.getElementsByClassName("dom2")[0];
 let l = document.getElementsByClassName("left")[0];
-g.addEventListener('click',function(){
-    k.style.left = '-100%';
-    d.style.left = '50%'
-})
-l.addEventListener('click',function(){
-    d.style = '100%';
-    k.style.left = '50%'
-})
 
-
+$('.gotoTask').on('click',function(){
+    console.log(1)
+    $('.dom1').css('left','-100%');
+    $('.dom2').css('left','50%');
+})
+$('.left').on('click',function(){
+    $('.dom1').css('left','0');
+    $('.dom2').css('left','150%');
+})
 function showOverlay(classname) {
     if (classname) {
         $(".overlay." + classname).removeClass("hide");
@@ -45,7 +30,58 @@ function showOverlay(classname) {
     $("main").addClass("de-emphasized");
     $("body,html").addClass("overflow");
 }
+function testAnim(x) {
+    x.removeClass('fadeInRight animated').addClass('fadeInRight animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $(this).removeClass('fadeInRight animated');
+    });
+};
+$('.hero_n_s').on('click', function() {
+    if ($(this).hasClass('thor')) {
+        $('.hero_n_s').removeClass('odin_active loki_active hela_active');
+        if ($(this).hasClass('thor_active')) {
 
+        } else {
+            $('.hreo_img').removeClass('active');
+            $(this).addClass('thor_active')
+            $('.thor_img').addClass('active');
+            testAnim($('.thor_img'))
+        }
+    }
+    if ($(this).hasClass('odin')) {
+        $('.hero_n_s').removeClass('thor_active loki_active hela_active');
+
+        if ($(this).hasClass('odin_active')) {
+
+        } else {
+            $('.hreo_img').removeClass('active');
+            $(this).addClass('odin_active');
+            $('.odin_img').addClass('active');
+            testAnim($('.odin_img'))
+        }
+    }
+    if ($(this).hasClass('loki')) {
+        $('.hero_n_s').removeClass('odin_active thor_active hela_active');
+        if ($(this).hasClass('loki_active')) {
+
+        } else {
+            $('.hreo_img').removeClass('active');
+            $(this).addClass('loki_active');
+            $('.loki_img').addClass('active');
+            testAnim($('.loki_img'))
+        }
+    }
+    if ($(this).hasClass('hela')) {
+        $('.hero_n_s').removeClass('odin_active thor_active loki_active');
+        if ($(this).hasClass('hela_active')) {
+
+        } else {
+            $('.hreo_img').removeClass('active');
+            $(this).addClass('hela_active');
+            $('.hela_img').addClass('active');
+            testAnim($('.hela_img'))
+        }
+    }
+})
 function hideOverlay(classname) {
     if (classname) {
         $(".overlay." + classname).addClass("hide");
