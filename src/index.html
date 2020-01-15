@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><영웅난세> 사전등록</title>
+    <meta name="keywords" content="영웅, 난세, 삼국, 고구려, 전략, RPG, 수집">
+    <meta name="description" content="명장 전략 RPG, <영웅난세> 사전등록 그랜드 오프닝">
+    <link rel="icon" type="image/x-icon" href="images/icon.png"/>
+    <title><영웅난세/> 사전등록</title>
 </head>
 <body>
     <div id="ie8" style="font-size: 14px; height: 50px; width: 100%; background: red; border-bottom: rgb(230,230,198) 1px solid; position: absolute; color: #fff; text-align: center; left: 0px; z-index: 99999; line-height: 50px; TOP: 0px;display: none">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。
@@ -16,7 +19,7 @@
                 <img src="images/appbtn.png" alt="" class="appbtn">
             </div>
         </div>
-        <div class="advance_show" id="advance_show">
+        <div class="advance_show">
             <img src="images/body/body.jpg" alt="" class="advance_bg">
             <div class="number">
                 <span>1</span>
@@ -25,17 +28,20 @@
                 <span>1</span>
                 <span>1</span>
             </div>
+            <div id="advance_show"></div>
             <div class="advance">
                 <div class="adv_dom">
                     <div class="phoneBtn">
-                        <img src="images/body/iosout.png" id="ioss" alt="" />
-                        <img src="images/body/androidout.png" id="androids" alt="" />
+                        <img src="images/body/iosout.png" id="ioss" class="adv_radio_btn" alt="" />
+                        <img src="images/body/androidout.png" id="androids" class="adv_radio_btn" alt="" />
                     </div>
-                    <input type="text" class="adv_input" placeholder="'-'를 제외한 휴대폰 번호를 입력해 주세요" />
+                    <input type="text" maxlength="11" class="adv_input" placeholder="'-'를 제외한 휴대폰 번호를 입력해 주세요" />
                     <img src="images/body/submitimg.png" alt="" class="adv_btn" />
                     <img src="images/body/check.png" alt="" class="adv_check checkno active" />
                     <img src="images/body/checkin.png" alt="" class="adv_check checkin" />
-                    <img src="images/body/explain.png" alt="" class="adv_explain">
+                    <img src="images/body/explain.png" alt="" class="adv_explain adv_normal active">
+                    <img src="images/body/explainout.png" alt="" class="adv_explain adv_error">
+                    <div class="alert_dom"></div>
                     <!-- <div class="conditions"></div>
                     <div class="matters"></div> -->
                 </div>
@@ -51,7 +57,7 @@
                     <img src="images/task/line.png" alt="" class="task_line">
                 </div>
                 <div class="small_gift_dom">
-                    <img src="images/task/gitftop.png" alt="" class="small_gift_ swing animated infinite">
+                    <img src="images/task/gitftop.png" alt="" class="small_gift_">
                 </div>
             
                 <img src="images/task/design.png" alt="" class="task_design" />
@@ -61,15 +67,15 @@
                 <img src="images/task/left.png" alt="" class="left scroolLeft">
                 <div class="task1">
                     <img src="images/task/clear.png" alt="" class="complete">
-                    <a href="#" target="_black" class="task_play"></a>
+                    <div class="task_play task_paly_nomal"></div>
                 </div>
                 <div class="task2">
                     <img src="images/task/clear.png" alt="" class="complete">
-                    <a href="#" target="_black" class="task_play"></a>
+                    <div class="task_play task_play_forum"></div>
                 </div>
                 <div class="task3">
                     <img src="images/task/clear.png" alt="" class="complete">
-                    <a href="#" target="_black" class="task_play"></a>
+                    <div class="task_play task_play_fans"></div>
                 </div>
             </div>
         </div>

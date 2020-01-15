@@ -70,8 +70,9 @@ html {
     height: 1.4rem;
     left: 50%;
     margin-left: -5.5rem;
-    top: 6.83rem;
+    top: 50%;
     cursor: pointer;
+    margin-top: 1.8rem;
 }
 
 .appbtn:hover {}
@@ -102,7 +103,13 @@ html {
 .advance_show {
     position: relative;
     width: 100%;
-
+    #advance_show{
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+        height:0;
+        z-index: 3;
+    }
     .time {
         font-size: 0.21rem;
         text-align: center;
@@ -125,8 +132,8 @@ html {
 
     .advance {
         position: absolute;
-        width: 13.03rem;
-        height: 5.74rem;
+        width: 12.45rem;
+        height: 5.05rem;
         top: 2.47rem;
         left: 50%;
         margin-left: -6.5rem;
@@ -157,7 +164,7 @@ html {
         position: absolute;
         left: 50%;
         margin-left: -4.5rem;
-        bottom: -2rem;
+        bottom: -2.7rem;
 
         .phoneBtn {
             position: absolute;
@@ -246,9 +253,21 @@ html {
         }
         .adv_explain{
             position: absolute;
-            bottom: 0.13rem;
+            bottom: 0.1rem;
+            width: 4.8rem;
+            height:0.22rem;
             left: 50%;
             margin-left: -3.35rem;
+            display:none;
+        }
+        .alert_dom{
+            position: absolute;
+            width:0.8rem;
+            height:.22rem;
+            bottom: 0.1rem;
+            left: 50%;
+            margin-left: .65rem;
+            cursor:pointer;
         }
         .active {
             display: block;
@@ -277,7 +296,7 @@ html {
 .task_show {
     position: relative;
     z-index: 9;
-
+    width: 100%;
     .task_bg {}
     .task_gift{
         position: absolute;
@@ -377,6 +396,7 @@ html {
             bottom: .8rem;
             left: 50%;
             margin-left: -2rem;
+            display:none;
         }
 
         .task_play {
@@ -664,9 +684,9 @@ html {
 }
 
 #attention {
-    width: 8.76rem;
-    height: 6.05rem;
-    background: url("../images/alert/alert2.png") no-repeat;
+    width: 8.17rem;
+    height: 4.52rem;
+    background: url("../images/body/alert.png") no-repeat;
     background-size: 100% 100%;
     display: none;
     .closeL {
@@ -742,40 +762,7 @@ html {
     height: 100%;
 }
 
-@media only screen and (min-width: 1787px) and (max-width: 1900px) {
-    .task_show {
-        position: relative;
-        z-index: 9;
-        margin-top: -4.6rem;
-    }
 
-    .task_show .title {
-        width: 9.67rem;
-        height: 1.45rem;
-        position: absolute;
-        top: 4.8rem;
-        left: 50%;
-        margin-left: -4.7rem;
-    }
-
-    .task_show .dom1 {
-        position: absolute;
-        width: 9.44rem;
-        height: 6.43rem;
-        top: 8rem;
-        margin-left: -4.5rem;
-        transition: all 0.5s ease;
-    }
-
-    .task_show .dom2 {
-        position: absolute;
-        width: 12rem;
-        height: 6.43rem;
-        top: 8rem;
-        margin-left: -6rem;
-        transition: all 0.5s ease;
-    }
-}
 
 .gotoforum {
     display: block;
@@ -790,4 +777,55 @@ html {
 .foot_show{
    position:relative;
    width:100%;
+}
+
+
+//适配
+@media only screen and (min-width: 1153px) and (max-width: 1248px){html{font-size: 65px;}
+  
+}
+@media only screen and (min-width: 1249px) and (max-width: 1344px){
+    .advance_show .adv_dom{bottom:-2.3rem;}
+}
+@media only screen and (min-width: 1345px) and (max-width: 1440px){
+    
+}   
+@media only screen and (min-width: 1441px) and (max-width: 1536px){
+  .advance_show .adv_dom {bottom: -3.5rem;}
+    .task_show .dom1 .gotoTask{top:8.3rem;}
+    .task_show .dom1 .task_design{top:5rem;}
+    .task_show .dom2{top:4rem;}
+    .game_show .game_people{top:1rem;}
+}
+@media only screen and (min-width: 1537px) and (max-width: 1632px){
+    .advance_show .adv_dom {bottom: -3.5rem;}
+    .task_show .dom1 .gotoTask{top:8.3rem;}
+    .task_show .dom1 .task_design{top:5rem;}
+    .task_show .dom2{top:4rem;}
+    .game_show .game_people{top:1rem;}
+}
+@media only screen and (min-width: 1633px) and (max-width: 1728px){
+    .advance_show .adv_dom {bottom: -3rem;}
+    .task_show .dom1 .gotoTask{top:8.3rem;}
+    .task_show .dom1 .task_design{top:5rem;}
+    .task_show .dom2{top:4rem;}
+    .game_show .game_people{top:1rem;}
+}
+@media only screen and (min-width: 1729px) and (max-width: 1824px){
+  .advance_show .adv_dom {bottom: -4rem;}
+    .task_show .dom1 .gotoTask{top:9rem;}
+    .task_show .dom1 .task_design{top:5.7rem;}
+    .task_show .dom2{top:4rem;}
+    .game_show .game_people{top:1rem;}
+}
+@media only screen and (min-width: 1825px) and (max-width: 1919px){
+    .advance_show .adv_dom {bottom: -4rem;}
+    .task_show .dom1 .gotoTask{top:9rem;}
+    .task_show .dom1 .task_design{top:5.7rem;}
+    .task_show .dom2{top:4rem;}
+    .game_show .game_people{top:1rem;}
+
+} 
+@media only screen and (min-width: 1920px){
+  
 }
