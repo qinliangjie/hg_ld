@@ -229,11 +229,9 @@ $(".appbtn").on('click',function(){
     }else{
       $(this).prev().show();
       if(equipment=='iOS'){
-        layer.msg('Coming soon!')
-        //暂时还未有地址
-        //window.open("https://apps.apple.com/kr/app/%EC%82%BC%EA%B5%AD%EC%A7%80-%EB%94%94%ED%8E%9C%EC%8A%A4m/id1300090151"); 
+        window.open("https://apps.apple.com/us/app/영웅난세/id1477591737?l=zh&ls=1"); 
       }else if(equipment=='Android'){
-        window.open("https://play.google.com/store/apps/details?id=com.epc.tfsgzhw "); 
+        window.open("https://play.google.com/store/apps/details?id=com.herofight.kr.ld"); 
       }
     }
       
